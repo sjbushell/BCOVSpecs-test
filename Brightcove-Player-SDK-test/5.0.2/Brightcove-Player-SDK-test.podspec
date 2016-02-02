@@ -11,11 +11,10 @@ Pod::Spec.new do |s|
 
   s.default_subspec = 'default'
    
-  s.ios.deployment_target = '7.0'
-  s.tvos.deployment_target = '9.0' 
-  
   s.subspec "default" do |ss|
+    ss.ios.deployment_target = '7.0'
     ss.ios.vendored_framework   = "ios/static/BrightcovePlayerSDK.framework"
+    ss.tvos.deployment_target = '9.0' 
     ss.tvos.vendored_framework  = "tvos/BrightcovePlayerSDK.framework"
   end
 
